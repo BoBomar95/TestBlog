@@ -168,5 +168,3 @@ function buildSite() {
 
 // Execute the build
 buildSite();
-    </content>
-    </write_to_file>
