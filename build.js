@@ -125,7 +125,6 @@ function generatePostsHTML(posts) {
 function generateIndexHTML(postsHTML) {
     console.log('Generating complete index.html...');
     const fullHTML = `<!DOCTYPE html>
-<<<<<<< HEAD
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -147,29 +146,6 @@ function generateIndexHTML(postsHTML) {
         </footer>
     </body>
     </html>`;
-=======
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Static Blog</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>My Static Blog</h1>
-    </header>
-    <main>
-        <!-- Blog Posts -->
-        <!-- Each blog post is inserted here in reverse chronological order -->
-        ${postsHTML}
-    </main>
-    <footer>
-        <p>&copy; ${new Date().getFullYear()} My Static Blog</p>
-    </footer>
-</body>
-</html>`;
->>>>>>> 1c99f48 (Initial commit)
     console.log('index.html has been generated successfully.');
     return fullHTML;
 }
