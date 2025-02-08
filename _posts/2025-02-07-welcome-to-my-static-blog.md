@@ -8,4 +8,4 @@ tags: ['introduction', 'welcome', 'static blog']
 
 Welcome to my new static blog! This is the first post where I will share my thoughts and experiences on web development, markdown blogging, and more.
 
-Stay tuned for more updates!!!!11
+Stay tuned for more updates!!!!
