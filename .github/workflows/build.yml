@@ -36,6 +36,4 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add index.html
           git commit -m "Update index.html via GitHub Actions"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push https://BoBomar95:${{ secrets.CUSTOM_PAT }}@github.com/BoBomar95/TestBlog.git main
