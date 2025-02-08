@@ -97,3 +97,11 @@ a {
 a:hover {
     text-decoration: underline;
 }
+.disclaimer {
+  font-size: 0.85em;       /* Makes the text a bit smaller */
+  padding: 10px;           /* Adds some spacing around the text */
+  background-color: #f0f0f0; /* Gives a subtle background color */
+  text-align: center;      /* Centers the text */
+  border-bottom: 1px solid #ccc; /* Optional: Adds a visual divider */
+  margin-bottom: 20px;     /* Adds space between the disclaimer and the next section */
+}
