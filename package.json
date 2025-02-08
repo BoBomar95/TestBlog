@@ -1,0 +1,16 @@
+{
+  "name": "my-static-blog",
+  "version": "1.0.0",
+  "description": "A minimal static blog using Markdown and Netlify CMS",
+  "type": "module",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^4.3.0"
+  },
+  "author": "Brenden",
+  "license": "MIT"
+}
