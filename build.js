@@ -83,7 +83,7 @@ function generateJSONLD(post) {
         "headline": post.title.replace(/"/g, '\\"'),
         "author": post.author.replace(/"/g, '\\"'),
         "datePublished": post.date,
-        "keywords": post.tags.map(tag => tag.replace(/"/g, '\\"'))
+        "keywords": post.tags.join(',') // Correctly joining tags with commas
     };
     const jsonldString = JSON.stringify(jsonld, null, 2);
     console.log(`Generated JSON-LD for "${post.title}":\n${jsonldString}`);
@@ -168,3 +168,5 @@ function buildSite() {
 
 // Execute the build
 buildSite();
+    </content>
+    </write_to_file>
