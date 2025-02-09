@@ -1,0 +1,143 @@
+/* styles.css */
+
+/* 
+    Common Navigation
+    -----------------
+    Styles for the navigation menu in the header.
+    - Navigation bar with a dark background.
+    - Horizontal layout for menu items on larger screens.
+    - Vertical layout on smaller screens for responsiveness.
+*/
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+/* 
+    Header
+    -------
+    Styles for the header section containing the navigation menu.
+    - Padding for spacing.
+    - Light background for contrast.
+*/
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* 
+    Main Content
+    ------------
+    Styles for the main content area where blog posts are listed.
+    - Padding for readability.
+*/
+main {
+    padding: 20px;
+}
+
+/* 
+    Blog Posts
+    ----------
+    Styles for individual blog post articles.
+    - Margin between blog posts for clear separation.
+    - Styling for blog post headers and content.
+*/
+article {
+    margin-bottom: 40px;
+}
+
+article header h2 {
+    margin-bottom: 10px;
+}
+
+article p {
+    line-height: 1.6;
+}
+
+/* 
+    Tagging System
+    --------------
+    Styles for the visible tag list within each blog post.
+    - Layout and appearance of tags for better visibility.
+*/
+.tags {
+    margin-top: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* 
+    Clear Visual Divider
+    ---------------------
+    Styles for the horizontal rule separating blog posts.
+    - Light color for subtle separation.
+*/
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 40px 0;
+}
+
+/* 
+    Footer
+    -------
+    Styles for the footer section.
+    - Padding for spacing.
+    - Light background to match header.
+    - Fixed position at the bottom of the page.
+*/
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* 
+    Responsive Design
+    ------------------
+    Media queries to ensure the website is responsive on different screen sizes.
+    - Adjust navigation layout on smaller screens.
+*/
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

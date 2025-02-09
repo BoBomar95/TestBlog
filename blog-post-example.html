@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- Metadata and Linking to CSS -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sample Blog Post</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Common Navigation Menu -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page1.html">Page1</a></li>
+                    <li><a href="page2.html">Page2</a></li>
+                    <li><a href="page3.html">Page3</a></li>
+                    <li><a href="page4.html">Page4</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!-- Disclaimer Section -->
+        <div class="disclaimer">
+            All works displayed on this blog are the property of their respective copyright owners. I do not claim any ownership of the works published here. This content is intended solely for informational and educational purposes, and any use of copyrighted material is done in good faith under the fair use doctrine. If you are the owner of any material used on this site and believe it has been included without proper authorization, please contact me so that we can promptly address your concerns.
+        </div>
+    
+        <!-- Main Content Area -->
+        <main>
+            <!-- Blog Post Article -->
+            <article data-tags="technology, tutorial, webdev">
+                <!-- 
+                    Tag Section
+                    ------------
+                    This section displays the tags associated with the blog post.
+                    Each tag is wrapped in a <span> with the class "tag".
+                    To add a new tag, replicate the <span class="tag">TagName</span> element.
+                    To remove a tag, simply delete the corresponding <span> element.
+                -->
+                <div class="tags">
+                    <span class="tag">technology</span>
+                    <span class="tag">tutorial</span>
+                    <span class="tag">webdev</span>
+                </div>
+    
+                <!-- 
+                    Blog Post Header
+                    -----------------
+                    Contains the title and author of the blog post.
+                -->
+                <header>
+                    <h2>Sample Blog Post</h2>
+                    <p>By Author Name</p>
+                </header>
+    
+                <!-- 
+                    Blog Post Content
+                    ------------------
+                    This section holds the main content of the blog post.
+                -->
+                <section>
+                    <p>This is a placeholder for the blog post content.</p>
+                </section>
+    
+                <!-- 
+                    Blog Post Footer
+                    -----------------
+                    Reserved for any additional details or future use.
+                -->
+                <footer>
+                    <!-- Additional details or future use -->
+                </footer>
+    
+                <!-- 
+                    JSON-LD Structured Data
+                    ------------------------
+                    This script provides structured data for the blog post to enhance machine readability.
+                    It includes metadata such as the title, author, and keywords (tags).
+                    Ensure that the "keywords" array matches the tags listed above.
+                    To update, modify the values within the "keywords" array accordingly.
+                -->
+                <script type="application/ld+json">
+                {
+                    "@context": "http://schema.org",
+                    "@type": "BlogPosting",
+                    "headline": "Sample Blog Post",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Author Name"
+                    },
+                    "keywords": ["technology", "tutorial", "webdev"]
+                }
+                </script>
+            </article>
+            <!-- End of Blog Post Article -->
+    
+            <!-- Add more blog posts below following the same structure -->
+        </main>
+    
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2025 Your Blog Name. All rights reserved.</p>
+        </footer>
+    </body>
+    </html>
