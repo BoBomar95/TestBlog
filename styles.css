@@ -1,107 +1,143 @@
 /* styles.css */
 
-/* CSS Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* 
+    Common Navigation
+    -----------------
+    Styles for the navigation menu in the header.
+    - Navigation bar with a dark background.
+    - Horizontal layout for menu items on larger screens.
+    - Vertical layout on smaller screens for responsiveness.
+*/
+nav {
+    background-color: #333;
 }
 
-/* Typography */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+/* 
+    Header
+    -------
+    Styles for the header section containing the navigation menu.
+    - Padding for spacing.
+    - Light background for contrast.
+*/
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* 
+    Main Content
+    ------------
+    Styles for the main content area where blog posts are listed.
+    - Padding for readability.
+*/
+main {
     padding: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 10px;
-    color: #222;
-}
-
-p {
-    margin-bottom: 15px;
-}
-
-/* Layout */
-header, footer {
-    text-align: center;
-    padding: 20px 0;
-}
-
-main {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Blog Posts */
+/* 
+    Blog Posts
+    ----------
+    Styles for individual blog post articles.
+    - Margin between blog posts for clear separation.
+    - Styling for blog post headers and content.
+*/
 article {
     margin-bottom: 40px;
 }
 
-article header {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-article h2 {
-    font-size: 1.5em;
-    margin-bottom: 5px;
+article header h2 {
+    margin-bottom: 10px;
 }
 
 article p {
+    line-height: 1.6;
+}
+
+/* 
+    Tagging System
+    --------------
+    Styles for the visible tag list within each blog post.
+    - Layout and appearance of tags for better visibility.
+*/
+.tags {
+    margin-top: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 3px;
     font-size: 0.9em;
-    color: #666;
 }
 
-article section {
-    font-size: 1em;
-    color: #444;
-}
-
-/* Dividers */
+/* 
+    Clear Visual Divider
+    ---------------------
+    Styles for the horizontal rule separating blog posts.
+    - Light color for subtle separation.
+*/
 hr {
     border: none;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #ccc;
     margin: 40px 0;
 }
 
-/* Responsive Design */
+/* 
+    Footer
+    -------
+    Styles for the footer section.
+    - Padding for spacing.
+    - Light background to match header.
+    - Fixed position at the bottom of the page.
+*/
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* 
+    Responsive Design
+    ------------------
+    Media queries to ensure the website is responsive on different screen sizes.
+    - Adjust navigation layout on smaller screens.
+*/
 @media (max-width: 600px) {
-    body {
-        padding: 10px;
+    nav ul {
+        flex-direction: column;
     }
-
-    main {
-        width: 100%;
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
     }
-
-    article h2 {
-        font-size: 1.3em;
-    }
-
-    article section {
-        font-size: 0.95em;
-    }
-}
-
-/* Accessibility Enhancements */
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-.disclaimer {
-  font-size: 0.85em;       /* Makes the text a bit smaller */
-  padding: 10px;           /* Adds some spacing around the text */
-  background-color: #f0f0f0; /* Gives a subtle background color */
-  text-align: center;      /* Centers the text */
-  border-bottom: 1px solid #ccc; /* Optional: Adds a visual divider */
-  margin-bottom: 20px;     /* Adds space between the disclaimer and the next section */
 }
