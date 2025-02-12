@@ -10,6 +10,7 @@ on:
       - 'package-lock.json'
       - 'admin/**'
       - 'styles.css'
+      - '_config.yml'
 
 jobs:
   build:
@@ -27,6 +28,18 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      # New step to update the pagination setting in _config.yml
+      - name: Update Pagination Setting in _config.yml
+        run: |
+          # If a paginate setting exists, update it to 50; otherwise, add it.
+          if grep -q "^paginate:" _config.yml; then
+            sed -i 's/^paginate:.*/paginate: 50/' _config.yml
+          else
+            echo "paginate: 50" >> _config.yml
+          fi
+          echo "Updated _config.yml content:"
+          cat _config.yml
+
       - name: Run Build Script
         run: npm run build
 
@@ -34,6 +47,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          git commit -m "Update index.html via GitHub Actions" || echo "No changes to commit"
+          git add index.html _config.yml
+          git commit -m "Update index.html and _config.yml via GitHub Actions" || echo "No changes to commit"
           git push origin main
