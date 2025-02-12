@@ -1,0 +1,52 @@
+# _config.yml
+
+# Site settings
+title: "My Repository"
+description: "An aggregator and distributor of various blog posts."
+baseurl: ""           # Leave empty if your site is at the root (https://bobomar95.github.io)
+url: "https://bobomar95.github.io"  # The base URL of your site
+
+# Theme settings
+theme: jekyll-theme-primer
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-github-metadata
+  - jekyll-seo-tag
+  - jekyll-commonmark-ghpages
+  - jekyll-gist
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+
+# Pagination configuration
+paginate: 50               # Display up to 50 posts per page (adjust as needed)
+paginate_path: "/page:num/" # URL pattern for paginated pages
+
+# GitHub Pages metadata (if needed)
+github:
+  is_project_page: true
+
+# Defaults for posts
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+# Future posts (set to false so posts with future dates aren't published)
+future: false
